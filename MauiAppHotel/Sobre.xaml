@@ -5,10 +5,11 @@
              Title="Sobre">
     <VerticalStackLayout Padding="30" Spacing="15">
         <Label Text="App Hotel" FontSize="28" FontAttributes="Bold"
-               TextColor="#1E7A8C" HorizontalOptions="Center" />
+               TextColor="#0F766E" HorizontalOptions="Center" />
         <Label Text="Desenvolvedor: Pedro Henrique Araujo" FontSize="18" />
         <Label Text="Ano de desenvolvimento: 2026" FontSize="18" />
         <Label Text="Curso Técnico em Desenvolvimento de Sistemas - Programação Mobile I" FontSize="14" />
-        <Button Text="Voltar" Clicked="OnVoltarClicked" />
+        <Button Text="Voltar" BackgroundColor="#0F766E" TextColor="White"
+                CornerRadius="10" Clicked="OnVoltarClicked" />
     </VerticalStackLayout>
 </ContentPage>

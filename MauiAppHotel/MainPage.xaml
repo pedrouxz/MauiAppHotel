@@ -12,7 +12,7 @@
         <VerticalStackLayout Padding="20" Spacing="14">
 
             <Label Text="Cálculo da Diária" FontSize="32" FontAttributes="Bold"
-                   TextColor="#512BD4" HorizontalOptions="Center" />
+                   TextColor="#0F766E" HorizontalOptions="Center" />
 
             <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="15">
                 <Label Text="Adultos:" VerticalOptions="Center" FontSize="18" />
@@ -34,8 +34,8 @@
             <Picker x:Name="pck_quarto" Title="Selecione sua Acomodação"
                     ItemDisplayBinding="{Binding Descricao}" />
 
-            <Border Stroke="#512BD4" StrokeThickness="2" Padding="15"
-                    BackgroundColor="{AppThemeBinding Light=#F3EFFF, Dark=#2B2540}">
+            <Border Stroke="#0F766E" StrokeThickness="2" Padding="15"
+                    BackgroundColor="{AppThemeBinding Light=#E6F7F5, Dark=#12302D}">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
@@ -56,7 +56,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <Button Text="Avançar" BackgroundColor="#512BD4" TextColor="White"
+            <Button Text="Avançar" BackgroundColor="#0F766E" TextColor="White"
                     CornerRadius="10" Clicked="OnAvancarClicked" />
         </VerticalStackLayout>
     </ScrollView>

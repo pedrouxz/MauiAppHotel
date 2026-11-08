@@ -5,7 +5,7 @@
              Title="Resumo da Reserva">
     <VerticalStackLayout Padding="20" Spacing="12">
         <Label Text="Resumo da Hospedagem" FontSize="24"
-               FontAttributes="Bold" TextColor="#1E7A8C" />
+               FontAttributes="Bold" TextColor="#0F766E" />
 
         <Label Text="{Binding QuartoSelecionado.Descricao, StringFormat='Quarto: {0}'}" FontSize="18" />
         <Label Text="{Binding QtdAdultos, StringFormat='Adultos: {0}'}" FontSize="18" />
@@ -14,8 +14,9 @@
         <Label Text="{Binding DataCheckOut, StringFormat='Check-out: {0:dd/MM/yyyy}'}" FontSize="18" />
         <Label Text="{Binding Estadia, StringFormat='Noites: {0}'}" FontSize="18" />
         <Label Text="{Binding ValorTotal, StringFormat='Valor total: {0:C}'}"
-               FontSize="22" FontAttributes="Bold" />
+               FontSize="22" FontAttributes="Bold" TextColor="#0F766E" />
 
-        <Button Text="Voltar" Clicked="OnVoltarClicked" />
+        <Button Text="Voltar" BackgroundColor="#0F766E" TextColor="White"
+                CornerRadius="10" Clicked="OnVoltarClicked" />
     </VerticalStackLayout>
 </ContentPage>

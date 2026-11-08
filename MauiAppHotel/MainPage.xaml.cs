@@ -46,13 +46,24 @@ public partial class MainPage : ContentPage
                 return;
             }
 
+            DateTime checkin = dtp_checkin.Date ?? DateTime.Now.Date;
+            DateTime checkout = dtp_checkout.Date ?? DateTime.Now.Date.AddDays(1);
+
+            // Validação do DatePicker
+            if (checkout <= checkin)
+            {
+                await DisplayAlert("Datas inválidas",
+                    "O check-out deve ser depois do check-in.", "OK");
+                return;
+            }
+
             Hospedagem h = new Hospedagem
             {
                 QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
                 QtdAdultos = (int)stp_adultos.Value,
                 QtdCriancas = (int)stp_criancas.Value,
-                DataCheckIn = dtp_checkin.Date ?? DateTime.Now.Date,
-                DataCheckOut = dtp_checkout.Date ?? DateTime.Now.Date.AddDays(1)
+                DataCheckIn = checkin,
+                DataCheckOut = checkout
             };
 
             await Navigation.PushAsync(new ContratoHospedagem
